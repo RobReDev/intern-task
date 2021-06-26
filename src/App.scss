@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+
+.App {
+    width: 80%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-areas:
+        "c i"
+        "c i";
+    grid-template-rows: 60px 1fr ;
+    grid-template-columns: 20% 1fr;
+    grid-gap: 8px;
+    grid-auto-flow: column;
+}
+
+@media screen and (max-width: 750px) {
+    .App {
+        grid-template-areas:
+            "c c"
+            "i i";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .App .image-wrapper {
+        margin-top: 400px;
+    }
+    .App .button {
+        width: 120px;
+    }
+    .App .categories {
+        margin-left: 140px;
+    }
+}
